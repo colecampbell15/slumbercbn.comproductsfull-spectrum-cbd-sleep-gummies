@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "settings": {}
+    },
+    "main-product": {
+      "type": "main-product",
+      "settings": {
+        "promo_code": "CHECKOUT15",
+        "promo_discount_label": "15% off",
+        "show_money_back": true,
+        "review_count": 4800,
+        "review_rating": 5
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "settings": {}
+    }
+  },
+  "order": ["announcement-bar", "main-product", "footer"]
+}

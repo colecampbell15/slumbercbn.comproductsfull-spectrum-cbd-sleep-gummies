@@ -1,0 +1,42 @@
+{% comment %}
+  Announcement bar is rendered by the React AnnouncementBar component.
+  Use schema settings to control the marquee messages from the Theme Editor.
+{% endcomment %}
+
+<div
+  id="dr-white-announcement-bar"
+  data-message-1="{{ section.settings.message_1 | escape }}"
+  data-message-2="{{ section.settings.message_2 | escape }}"
+  data-message-3="{{ section.settings.message_3 | escape }}"
+></div>
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "settings": [
+    {
+      "type": "text",
+      "id": "message_1",
+      "label": "Message 1",
+      "default": "✨ Free Shipping on Orders $39+"
+    },
+    {
+      "type": "text",
+      "id": "message_2",
+      "label": "Message 2",
+      "default": "🦷 Used by 50,000+ Happy Customers"
+    },
+    {
+      "type": "text",
+      "id": "message_3",
+      "label": "Message 3",
+      "default": "💜 Use Code CHECKOUT15 for 15% Off"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Announcement Bar"
+    }
+  ]
+}
+{% endschema %}

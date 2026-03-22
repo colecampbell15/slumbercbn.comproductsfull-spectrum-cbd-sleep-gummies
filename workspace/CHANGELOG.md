@@ -19,6 +19,14 @@ You MUST maintain this file to track your work across messages. This is NON-NEGO
 
 <changelog>
 
+## 2026-03-22 — Shopify Theme Integration
+- Created full `shopify-theme/` scaffold: `layout/theme.liquid`, `sections/`, `templates/`, `config/`, `locales/`, `assets/`
+- `layout/theme.liquid` mounts React `#app` div and injects `window.__SHOPIFY__` with product/cart/customer data
+- Added `build:shopify` npm script + updated `vite.config.ts` with a `shopify` mode that outputs `app.js`/`app.css` to `shopify-theme/assets/`
+- Liquid section schemas expose Theme Editor controls (promo code, announcement messages, star rating, etc.)
+- Created `SHOPIFY_DEPLOY.md` with full CLI deploy guide and Add-to-Cart AJAX wiring instructions
+
+
 ## 2026-03-22 — Remove FooterDisclosure from Footer
 - Removed `<FooterDisclosure />` from `src/sections/Footer/index.tsx`
 - Component file `FooterDisclosure.tsx` still exists but is no longer rendered

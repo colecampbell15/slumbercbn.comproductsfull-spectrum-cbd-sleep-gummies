@@ -1,0 +1,24 @@
+{% comment %}
+  Footer is rendered by the React Footer component.
+{% endcomment %}
+
+<div id="dr-white-footer" data-section-id="{{ section.id }}"></div>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "copyright_text",
+      "label": "Copyright text",
+      "default": "© 2025 Dr. White. All rights reserved."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Footer"
+    }
+  ]
+}
+{% endschema %}

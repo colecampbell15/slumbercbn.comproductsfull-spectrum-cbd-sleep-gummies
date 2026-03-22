@@ -1,0 +1,58 @@
+{% comment %}
+  This section is rendered by the React app (ProductSection).
+  Data is passed via window.__SHOPIFY__.product — no extra Liquid HTML needed.
+  Add schema settings below to allow merchants to customise the section in the Theme Editor.
+{% endcomment %}
+
+<div id="dr-white-product-section" data-section-id="{{ section.id }}"></div>
+
+{% schema %}
+{
+  "name": "Dr. White Product",
+  "tag": "section",
+  "class": "section-main-product",
+  "settings": [
+    {
+      "type": "text",
+      "id": "promo_code",
+      "label": "Promo Code",
+      "default": "CHECKOUT15"
+    },
+    {
+      "type": "text",
+      "id": "promo_discount_label",
+      "label": "Promo Discount Label",
+      "default": "15% off"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_money_back",
+      "label": "Show Money-Back Guarantee Badge",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "review_count",
+      "min": 0,
+      "max": 10000,
+      "step": 100,
+      "label": "Review Count",
+      "default": 4800
+    },
+    {
+      "type": "range",
+      "id": "review_rating",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "label": "Star Rating",
+      "default": 5
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dr. White Product"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}" />
+    {% endif %}
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="{{ shop.name }}" />
+    <meta property="og:url" content="{{ canonical_url }}" />
+    <meta property="og:title" content="{{ page_title | escape }}" />
+    <meta property="og:type" content="website" />
+    {% if page_description %}
+      <meta property="og:description" content="{{ page_description | escape }}" />
+    {% endif %}
+    {% if page_image %}
+      <meta property="og:image" content="{{ page_image | image_url }}" />
+    {% endif %}
+
+    {{ content_for_header }}
+
+    <!-- Dr. White React App Styles -->
+    {{ 'app.css' | asset_url | stylesheet_tag }}
+  </head>
+  <body>
+    <!-- React mounts here -->
+    <div id="app"></div>
+
+    <!-- Shopify product/cart data passed to the React app -->
+    <script>
+      window.__SHOPIFY__ = {
+        shopUrl: "{{ shop.url }}",
+        currency: "{{ cart.currency.iso_code }}",
+        moneyFormat: {{ shop.money_format | json }},
+        cartCount: {{ cart.item_count }},
+        cartTotal: {{ cart.total_price }},
+        product: {% if product %}{{ product | json }}{% else %}null{% endif %},
+        collections: {% if collections %}{{ collections | json }}{% else %}null{% endif %},
+        customer: {% if customer %}{{ customer | json }}{% else %}null{% endif %}
+      };
+    </script>
+
+    <!-- Dr. White React App Bundle -->
+    {{ 'app.js' | asset_url | script_tag }}
+
+    {{ content_for_layout }}
+  </body>
+</html>
