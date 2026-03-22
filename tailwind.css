@@ -1,0 +1,223 @@
+@tailwind components;
+@tailwind utilities;
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(91, 45, 142, 0.4); }
+  70% { box-shadow: 0 0 0 12px rgba(91, 45, 142, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(91, 45, 142, 0); }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s infinite;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+@font-face {
+  /* @FONTWARNING[{"type":"restricted","family":"PP Mori","weight":"400","style":"normal","allowsCrossOrigin":true}] */
+  font-family: 'PP Mori';
+  src: url('https://slumbercbn.com/cdn/shop/t/83/assets/PPMori-Regular.woff2?v=15184626386498422441772781770') format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  /* @FONTWARNING[{"type":"restricted","family":"PP Mori","weight":"600","style":"normal","allowsCrossOrigin":true}] */
+  font-family: 'PP Mori';
+  src: url('https://slumbercbn.com/cdn/shop/t/83/assets/PPMori-SemiBold.woff2?v=145410812287834626391772781768') format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('https://slumbercbn.com/cdn/fonts/barlow/barlow_n7.691d1d11f150e857dcbc1c10ef03d825bc378d81.woff2') format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('https://slumbercbn.com/cdn/fonts/barlow/barlow_n5.a193a1990790eba0cc5cca569d23799830e90f07.woff2') format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  /* @FONTWARNING[{"type":"restricted","family":"PP Mori","weight":"400","style":"normal","allowsCrossOrigin":true}] */
+  font-family: 'PP Mori';
+  src: url('https://slumbercbn.com/cdn/shop/t/83/assets/PPMori-Regular.woff2') format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  /* @FONTWARNING[{"type":"restricted","family":"PP Mori","weight":"600","style":"normal","allowsCrossOrigin":true}] */
+  font-family: 'PP Mori';
+  src: url('https://slumbercbn.com/cdn/shop/t/83/assets/PPMori-SemiBold.woff2') format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  /* @FONTWARNING[{"type":"restricted","family":"Font Awesome 6 Free","weight":"400","style":"normal","allowsCrossOrigin":true}] */
+  font-family: 'Font Awesome 6 Free';
+  src: url('https://slumbercbn.com/cdn/shop/t/83/assets/fa-regular-400.woff2') format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  /* @FONTWARNING[{"type":"restricted","family":"Font Awesome 6 Free","weight":"900","style":"normal","allowsCrossOrigin":true}] */
+  font-family: 'Font Awesome 6 Free';
+  src: url('https://slumbercbn.com/cdn/shop/t/83/assets/fa-solid-900.woff2') format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  /* @FONTWARNING[{"type":"restricted","family":"Font Awesome 5 Free","weight":"900","style":"normal","allowsCrossOrigin":true}] */
+  font-family: 'Font Awesome 5 Free';
+  src: url('https://slumbercbn.com/cdn/shop/t/83/assets/fa-solid-900.woff2') format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  /* @FONTWARNING[{"type":"restricted","family":"Font Awesome 5 Free","weight":"400","style":"normal","allowsCrossOrigin":true}] */
+  font-family: 'Font Awesome 5 Free';
+  src: url('https://slumbercbn.com/cdn/shop/t/83/assets/fa-regular-400.woff2') format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  /* @FONTWARNING[{"type":"restricted","family":"FontAwesome","weight":"normal","style":"normal","allowsCrossOrigin":true}] */
+  font-family: 'FontAwesome';
+  src: url('https://slumbercbn.com/cdn/shop/t/83/assets/fa-solid-900.woff2') format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  /* @FONTWARNING[{"type":"restricted","family":"FontAwesome","weight":"normal","style":"normal","allowsCrossOrigin":true}] */
+  font-family: 'FontAwesome';
+  src: url('https://slumbercbn.com/cdn/shop/t/83/assets/fa-regular-400.woff2') format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  /* @FONTWARNING[{"type":"restricted","family":"PP Mori","weight":"normal","style":"normal","allowsCrossOrigin":true}] */
+  font-family: 'PP Mori';
+  src: url('https://slumbercbn.com/cdn/shop/t/83/assets/PPMori-Regular.woff2') format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2') format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2') format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@tailwind base;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: transparent;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: transparent;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
